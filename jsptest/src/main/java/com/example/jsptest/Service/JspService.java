@@ -13,7 +13,7 @@ import java.util.HashMap;
 public class JspService {
     public HashMap<String, Integer> computeSpaceConsumption(HashMap<String, Integer> map) throws IOException {
         ProcessBuilder builder = new ProcessBuilder(
-                "df", "-h", "|", "grep", "scratch", "|", "awk", "'{print $3, $4}'");
+                "df", "-h", "|", "grep", "/dev/xvda128", "|", "awk", "'{print $3, $4}'");
         builder.redirectErrorStream(true);
         Process p = builder.start();
         BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()));
