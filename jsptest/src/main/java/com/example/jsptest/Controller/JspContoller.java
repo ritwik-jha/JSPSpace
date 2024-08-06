@@ -54,8 +54,8 @@ public class JspContoller {
 
 //        model.addAttribute("message", messg);
 //        model.addAttribute("cnt", cnt);
-        mav.addObject("messg", messg);
-        mav.addObject("cnt", cnt);
+//        mav.addObject("messg", messg);
+//        mav.addObject("cnt", cnt);
 
         mav.addObject("space_consumed_5366", map.get("space_consumed_5366"));
         mav.addObject("total_space_5366", map.get("total_space_5366"));

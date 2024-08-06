@@ -24,14 +24,15 @@ public class JspService {
             if (line == null) { break; }
             log.info("log from lombok: " + line);
             if(line != null){
-            String[] arr = line.split(" ");
-            for(String i : arr){
-                log.info(i);
+                String[] arr = line.split(" ");
+
+                log.info("space available -> " + arr[0]);
+                log.info("total space -> " + arr[1]);
+
             }
-        }
-        else{
-            log.info("line is null");
-        }
+            else{
+                log.info("line is null");
+            }
         }
         
         return map;
