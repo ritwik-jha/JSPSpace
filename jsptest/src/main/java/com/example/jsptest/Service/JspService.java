@@ -1,5 +1,6 @@
 package com.example.jsptest.Service;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.io.BufferedReader;
@@ -8,6 +9,7 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 
 @Service
+@Slf4j
 public class JspService {
     public HashMap<String, Integer> computeSpaceConsumption(HashMap<String, Integer> map) throws IOException {
         ProcessBuilder builder = new ProcessBuilder(
@@ -19,7 +21,7 @@ public class JspService {
         while (true) {
             line = r.readLine();
             if (line == null) { break; }
-            System.out.println(line);
+            log.info(line);
         }
         return map;
     }
