@@ -30,6 +30,9 @@ public class JspService {
                 log.info(i);
             }
         }
+        else{
+            log.info("line is null");
+        }
         return map;
     }
 }
