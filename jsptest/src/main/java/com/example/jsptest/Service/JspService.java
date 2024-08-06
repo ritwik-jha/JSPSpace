@@ -24,6 +24,12 @@ public class JspService {
             if (line == null) { break; }
             log.info("log from lombok: " + line);
         }
+        if(line != null){
+            String[] arr = line.split(" ");
+            for(String i : arr){
+                log.info(i);
+            }
+        }
         return map;
     }
 }
