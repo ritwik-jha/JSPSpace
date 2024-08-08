@@ -27,7 +27,7 @@ public class JspContoller {
         log.info("-----------------------NEW REQUEST----------------------");
         ArrayList<Server> serverList = ServerList.getServers();
         log.info("Init serverList");
-        ArrayList<Server> serverConsumptionOutputList = jspService.findConsumptionForAllServer(serverList);
+        ArrayList<Server> serverConsumptionOutputList = serverList; //jspService.findConsumptionForAllServer(serverList);
         log.info("Space consumption computed");
         ModelAndView mav = new ModelAndView("home");
         log.info("ModelAndView created");
